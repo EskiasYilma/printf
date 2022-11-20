@@ -12,5 +12,6 @@ void hexaupper(unsigned long x);
 void flag_str(const char *s);
 int state_checker(const char *format, va_list args);
 int toLower(int chr);
+int state_checker_dig1(const char *format, va_list args);
 
 #endif
