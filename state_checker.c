@@ -41,7 +41,7 @@ int state_checker(const char *format, va_list args)
 			}
 			default:
 			{
-				state = 1;
+				state = state_checker_dig1(format, args);
 				break;
 			}
 		}
