@@ -2,7 +2,7 @@
 ![Latest commit](https://img.shields.io/github/last-commit/EskiasYilma/printf?style=round-square)
 
 
-This team project is a custom made printf function for the C programming language called printf (https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm) function. It has been optimized to take various inputs and optional arguments based exactly on how the standard library function printf works. We submitted this as part of the ALX software engineering course requirement for grading.
+This team project is a custom made printf function for the C programming language called printf (https://man7.org/linux/man-pages/man3/printf.3.html) function. It has been optimized to take various inputs and optional arguments based exactly on how the standard library function printf works. We submitted this as part of the ALX software engineering course requirement for grading.
 
 **Synopsis**
 This function '_printf' writes output to stdout, the standard output stream with the format and options without making use of any of the standard library files. It was written to use a local buffer of 1024 bytes when printing although it can print larger sets of data.
