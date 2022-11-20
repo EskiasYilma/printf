@@ -79,5 +79,5 @@ or
 |**R**|The argument received is expected to be a pointer type char * to an array of characters.  Characters from this array  are  encoded  to  ROT13  and printed in order up to (but not including a null byte  ('\0').  |
 
 ## **Authors**
-ESKIAS YILMA (<a href="github.com/eskiasyilma/">Eskias Yilma</a>)\
-KAYODE GBENGA MICHAEL (<a href="github.com/miclincoln/">Kayode Gbenga Michael</a>)
+ESKIAS YILMA (<a href="https://github.com/eskiasyilma/">Eskias Yilma</a>)\
+KAYODE GBENGA MICHAEL (<a href="https://github.com/miclincoln/">Kayode Gbenga Michael</a>)
