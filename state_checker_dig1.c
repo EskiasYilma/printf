@@ -21,9 +21,13 @@ int state_checker_dig1(const char *format, va_list args)
 			{
 				int n = va_arg(args, int);
 
-				no_to_str(n, 10, buf);
-				for (i = 0; buf[i]; i++)
-					_putchar(buf[i]);
+				print_number(n);
+				/**
+				 * no_to_str(n, 10, buf);
+				 * for (i = 0; buf[i]; i++)
+				 * _putchar(buf[i]);
+				 */
+
 				state = 0;
 				break;
 			}
