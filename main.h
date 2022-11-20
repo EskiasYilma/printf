@@ -11,5 +11,6 @@ void no_to_str(int64_t num, int base, char *buffer);
 void hexaupper(unsigned long x);
 void flag_str(const char *s);
 int state_checker(const char *format, va_list args);
+int toLower(int chr);
 
 #endif
