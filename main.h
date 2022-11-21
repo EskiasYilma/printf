@@ -18,5 +18,6 @@ int state_checker(const char *format, va_list args);
 int state_checker_dig1(const char *format, va_list args);
 int state_checker_dig2(const char *format, va_list args);
 int state_checker_adv(const char *format, va_list args);
+int state_checker_default(const char *format, va_list args);
 
 #endif

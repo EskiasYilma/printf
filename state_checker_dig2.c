@@ -23,7 +23,6 @@ int state_checker_dig2(const char *format, va_list args)
 				no_to_str(n, 10, buf);
 				for (i = 0; buf[i]; i++)
 					_putchar(buf[i]);
-				state = 0;
 				break;
 			}
 		case 'x':
@@ -33,7 +32,6 @@ int state_checker_dig2(const char *format, va_list args)
 				no_to_str(n, 16, buf);
 				for (i = 0; buf[i]; i++)
 					_putchar(buf[i]);
-				state = 0;
 				break;
 			}
 		case 'X':
@@ -41,7 +39,6 @@ int state_checker_dig2(const char *format, va_list args)
 				unsigned long n = va_arg(args, unsigned long);
 
 				hexaupper(n);
-				state = 0;
 				break;
 			}
 		default:
@@ -50,6 +47,7 @@ int state_checker_dig2(const char *format, va_list args)
 			break;
 		}
 		state = 0;
+		break;
 	}
 	return (state);
 }

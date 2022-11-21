@@ -45,6 +45,7 @@ int state_checker(const char *format, va_list args)
 				break;
 			}
 			state = 0;
+			break;
 		}
 	return (state);
 }
