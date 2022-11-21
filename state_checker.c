@@ -27,6 +27,10 @@ int state_checker(const char *format, va_list args)
 			{
 				const char *x = va_arg(args, const char *);
 
+				if (x == NULL)
+					x = "(null)";
+				else if (*x == '\0')
+					return (-1);
 				flag_str(x);
 				state = 0;
 				break;
