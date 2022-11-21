@@ -7,6 +7,7 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 int toLower(int chr);
+void print_number(int n);
 void rev_string(char *str1)
 void unsigned_no_to_str(uint64_t num, int base, char *buffer);
 void print_number(int n);
