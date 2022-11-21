@@ -37,8 +37,7 @@ int state_checker_dig2(const char *format, va_list args)
 			state = state_checker_adv(format, args);
 			break;
 		}
-		state = 0;
-		break;
 	}
+	state = 0;
 	return (state);
 }

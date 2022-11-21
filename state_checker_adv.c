@@ -23,7 +23,6 @@ int state_checker_adv(const char *format, va_list args)
 			unsigned_no_to_str((uint64_t) n, 16, buf);
 			for (i = 0; buf[i]; i++)
 				_putchar(buf[i]);
-			state = 0;
 			break;
 		}
 		case 'o':
@@ -33,7 +32,6 @@ int state_checker_adv(const char *format, va_list args)
 			unsigned_no_to_str(n, 8, buf);
 			for (i = 0; buf[i]; i++)
 				_putchar(buf[i]);
-			state = 0;
 			break;
 		}
 		default:
@@ -41,9 +39,8 @@ int state_checker_adv(const char *format, va_list args)
 			state = state_checker_default(format, args);
 			break;
 		}
-		state = 0;
-		break;
 	}
+	state = 0;
 	return (state);
 }
 
@@ -86,8 +83,7 @@ int state_checker_default(const char *format, va_list args)
 			_putchar(*format);
 			break;
 		}
-		state = 0;
-		break;
 	}
+	state = 0;
 	return (state);
 }

@@ -20,7 +20,6 @@ int state_checker(const char *format, va_list args)
 				ch = va_arg(args, int);
 
 				_putchar(ch);
-				state = 0;
 				break;
 			}
 			case 's':
@@ -32,13 +31,11 @@ int state_checker(const char *format, va_list args)
 				else if (*x == '\0')
 					return (-1);
 				flag_str(x);
-				state = 0;
 				break;
 			}
 			case '%':
 			{
 				_putchar('%');
-				state = 0;
 				break;
 			}
 			default:
@@ -46,8 +43,8 @@ int state_checker(const char *format, va_list args)
 				state = state_checker_dig1(format, args);
 				break;
 			}
-			state = 0;
 			break;
 		}
+	state = 0;
 	return (state);
 }
