@@ -29,7 +29,6 @@ int _printf(const char *format, ...)
 			state = state_checker(format, args);
 		format++;
 	}
-	_putchar('\0');
 
 	va_end(args);
 	return (counter);
