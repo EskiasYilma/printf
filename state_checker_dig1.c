@@ -17,26 +17,21 @@ int state_checker_dig1(const char *format, va_list args)
 		{
 			case 'd':
 			{
-				unsigned int n = va_arg(args, unsigned int);
+				int n = va_arg(args, int);
 
 				print_number(n);
-				/**
-				 * no_to_str(n, 10, buf);
-				 * for (i = 0; buf[i]; i++)
-				 * _putchar(buf[i]);
-				 */
-
-				state = 0;
+				no_to_str(n, 10, buf);
+				for (i = 0; buf[i]; i++)
+					_putchar(buf[i]);
 				break;
 			}
 			case 'i':
 			{
-				unsigned int n = va_arg(args, unsigned int);
+				int n = va_arg(args, int);
 
 				no_to_str(n, 10, buf);
 				for (i = 0; buf[i]; i++)
 					_putchar(buf[i]);
-				state = 0;
 				break;
 			}
 			default:
@@ -45,7 +40,7 @@ int state_checker_dig1(const char *format, va_list args)
 				break;
 			}
 			state = 0;
-
+			break;
 		}
 	return (state);
 }
