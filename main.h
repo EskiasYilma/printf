@@ -6,15 +6,16 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int toLower(int chr);
+void rev_string(char *str1)
 void unsigned_no_to_str(uint64_t num, int base, char *buffer);
+void print_number(int n);
 void no_to_str(int64_t num, int base, char *buffer);
 void hexaupper(unsigned long x);
 void flag_str(const char *s);
 int state_checker(const char *format, va_list args);
-int toLower(int chr);
 int state_checker_dig1(const char *format, va_list args);
 int state_checker_dig2(const char *format, va_list args);
-void print_number(int n);
-void rev_string(char *str1)
+int state_checker_adv(const char *format, va_list args);
 
 #endif
