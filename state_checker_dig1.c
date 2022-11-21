@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
-#include <stdlib.h>
 
 /**
  * state_checker_dig1 - digit flag checker
@@ -11,7 +9,7 @@
 
 int state_checker_dig1(const char *format, va_list args)
 {
-	char buf[65];
+	char buf[BUF_SIZE];
 	int state = 1;
 	int i;
 

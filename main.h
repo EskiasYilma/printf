@@ -3,6 +3,11 @@
 #include <stddef.h>
 #include <stdarg.h>
 #include <stdint.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+#define BUF_SIZE 1025
 
 int _putchar(char c);
 int _printf(const char *format, ...);

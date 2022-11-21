@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
-#include <stdlib.h>
 
 /**
  * state_checker_dig2 - checks for flags u, x, X
@@ -12,7 +10,7 @@
 int state_checker_dig2(const char *format, va_list args)
 {
 	int i, state = 1;
-	char buf[65];
+	char buf[BUF_SIZE];
 
 	switch (*format)
 	{

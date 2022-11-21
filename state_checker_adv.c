@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
-#include <stdlib.h>
 
 /**
  * state_checker_adv - checkes print state for p and o
@@ -12,7 +10,7 @@
 int state_checker_adv(const char *format, va_list args)
 {
 	int i, state = 1;
-	char buf[65];
+	char buf[BUF_SIZE];
 
 	switch (*format)
 	{

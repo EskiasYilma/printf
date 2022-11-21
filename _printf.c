@@ -1,7 +1,4 @@
-#include <stdarg.h>
-#include <stdlib.h>
 #include "main.h"
-#include <unistd.h>
 /**
  * _printf - prints to stdout
  * @format: format specifier
