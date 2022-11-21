@@ -28,7 +28,7 @@ int state_checker_adv(const char *format, va_list args)
 		}
 		case 'o':
 		{
-			unsigned int n = va_arg(args, int);
+			unsigned int n = va_arg(args, unsigned int);
 
 			unsigned_no_to_str(n, 8, buf);
 			for (i = 0; buf[i]; i++)
@@ -64,19 +64,26 @@ int state_checker_default(const char *format, va_list args)
 	{
 		case 'b':
 		{
-			int n = va_arg(args, int);
+			unsigned int n = va_arg(args, unsigned int);
 
 			no_to_str(n, 2, buf);
 			for (i = 0; buf[i]; i++)
 				_putchar(buf[i]);
-			state = 0;
+			break;
+		}
+		case 'X':
+		{
+			unsigned int n = va_arg(args, unsigned int);
+
+			no_to_str(n, 16, buf);
+			for (i = 0; buf[i]; i++)
+				_putchar(buf[i]);
 			break;
 		}
 		default:
 		{
 			_putchar('%');
 			_putchar(*format);
-			state = 0;
 			break;
 		}
 		state = 0;

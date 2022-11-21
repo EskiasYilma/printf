@@ -15,6 +15,7 @@ int toLower(int chr);
 void print_number(int n);
 void rev_string(char *str1);
 void unsigned_no_to_str(uint64_t num, int base, char *buffer);
+void unsigned_no_to_str_upper(uint64_t num, int base, char *buffer);
 void print_number(int n);
 void no_to_str(int64_t num, int base, char *buffer);
 void hexaupper(unsigned long x);

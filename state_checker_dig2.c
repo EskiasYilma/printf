@@ -16,27 +16,20 @@ int state_checker_dig2(const char *format, va_list args)
 	{
 		case 'u':
 			{
-				unsigned int n = va_arg(args, int);
+				unsigned int n = va_arg(args, unsigned int);
 
-				no_to_str(n, 10, buf);
+				unsigned_no_to_str(n, 10, buf);
 				for (i = 0; buf[i]; i++)
 					_putchar(buf[i]);
 				break;
 			}
 		case 'x':
 			{
-				unsigned int n = va_arg(args, int);
+				unsigned int n = va_arg(args, unsigned int);
 
-				no_to_str(n, 16, buf);
+				unsigned_no_to_str(n, 16, buf);
 				for (i = 0; buf[i]; i++)
 					_putchar(buf[i]);
-				break;
-			}
-		case 'X':
-			{
-				unsigned long n = va_arg(args, unsigned long);
-
-				hexaupper(n);
 				break;
 			}
 		default:
