@@ -1,6 +1,19 @@
 #include "main.h"
 
 /**
+  * flag_percent - % flag
+  * Return: '%'
+  */
+
+char *flag_percent(void)
+{
+	char *str;
+
+	str = "%";
+	return (str);
+}
+
+/**
   * flag_c - char flag
   * @c: char
   * Return: string
@@ -30,11 +43,13 @@ char *flag_s(va_list s)
 
 	if (str == NULL)
 		return ("(null)");
+	if (*str == '\0')
+		return (-1);
 	return (str);
 }
 
 /**
- * flag_nil - nothing flag
+ * flag_nil - raised nothing flag
  * @nil: char
  * Return: % + char passed
  */
@@ -50,17 +65,4 @@ char *flag_nil(char nil)
 	str[1] = nil;
 	str[2] = '\0';
 	return (ptr);
-}
-
-/**
-  * flag_percent - % flag
-  * Return: '%'
-  */
-
-char *flag_percent(void)
-{
-	char *str;
-
-	str = "%";
-	return (str);
 }
