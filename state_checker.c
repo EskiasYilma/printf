@@ -11,7 +11,7 @@
 int state_checker(const char *format, va_list args)
 {
 	char ch;
-	int state = 1;
+	int counter = 0, i = 0;
 
 	switch (*format)
 		{
@@ -20,31 +20,34 @@ int state_checker(const char *format, va_list args)
 				ch = va_arg(args, int);
 
 				_putchar(ch);
+				counter++;
 				break;
 			}
 			case 's':
 			{
-				const char *x = va_arg(args, const char *);
+				char *x = va_arg(args, char *);
 
+				x = malloc(sizeof(char *) + 1);
 				if (x == NULL)
 					x = "(null)";
 				else if (*x == '\0')
 					return (-1);
-				flag_str(x);
+				for (i = 0; x[i]; i++, counter++)
+					_putchar(x[i]);
+				free(x);
 				break;
 			}
 			case '%':
 			{
 				_putchar('%');
+				counter++;
 				break;
 			}
 			default:
 			{
-				state = state_checker_dig1(format, args);
+				counter += state_checker_dig1(format, args);
 				break;
 			}
-			break;
 		}
-	state = 0;
-	return (state);
+	return (counter);
 }

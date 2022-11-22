@@ -9,7 +9,7 @@
 
 int state_checker_adv(const char *format, va_list args)
 {
-	int i, state = 1;
+	int i, counter = 0;
 	char buf[BUF_SIZE];
 
 	switch (*format)
@@ -21,7 +21,7 @@ int state_checker_adv(const char *format, va_list args)
 			_putchar('0');
 			_putchar('x');
 			unsigned_no_to_str((uint64_t) n, 16, buf);
-			for (i = 0; buf[i]; i++)
+			for (i = 0; buf[i]; i++, counter++)
 				_putchar(buf[i]);
 			break;
 		}
@@ -30,18 +30,17 @@ int state_checker_adv(const char *format, va_list args)
 			unsigned int n = va_arg(args, unsigned int);
 
 			unsigned_no_to_str(n, 8, buf);
-			for (i = 0; buf[i]; i++)
+			for (i = 0; buf[i]; i++, counter++)
 				_putchar(buf[i]);
 			break;
 		}
 		default:
 		{
-			state = state_checker_default(format, args);
+			counter += state_checker_default(format, args);
 			break;
 		}
 	}
-	state = 0;
-	return (state);
+	return (counter);
 }
 
 
@@ -54,8 +53,8 @@ int state_checker_adv(const char *format, va_list args)
 
 int state_checker_default(const char *format, va_list args)
 {
-	int i, state = 1;
-	char buf[65];
+	int i, counter = 0;
+	char buf[BUF_SIZE];
 
 	switch (*format)
 	{
@@ -64,7 +63,7 @@ int state_checker_default(const char *format, va_list args)
 			unsigned int n = va_arg(args, unsigned int);
 
 			no_to_str(n, 2, buf);
-			for (i = 0; buf[i]; i++)
+			for (i = 0; buf[i]; i++, counter++)
 				_putchar(buf[i]);
 			break;
 		}
@@ -73,7 +72,7 @@ int state_checker_default(const char *format, va_list args)
 			unsigned int n = va_arg(args, unsigned int);
 
 			no_to_str(n, 16, buf);
-			for (i = 0; buf[i]; i++)
+			for (i = 0; buf[i]; i++, counter++)
 				_putchar(buf[i]);
 			break;
 		}
@@ -81,9 +80,9 @@ int state_checker_default(const char *format, va_list args)
 		{
 			_putchar('%');
 			_putchar(*format);
+			counter++;
 			break;
 		}
 	}
-	state = 0;
-	return (state);
+	return (counter);
 }
