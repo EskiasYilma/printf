@@ -10,7 +10,7 @@
 int state_checker_adv(const char *format, va_list args)
 {
 	int i, state = 1;
-	char buf[BUF_SIZE];
+	char buf[BUFFER_SIZE];
 
 	switch (*format)
 	{

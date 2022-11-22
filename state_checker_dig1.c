@@ -9,7 +9,7 @@
 
 int state_checker_dig1(const char *format, va_list args)
 {
-	char buf[BUF_SIZE];
+	char buf[BUFFER_SIZE];
 	int state = 1;
 	int i;
 

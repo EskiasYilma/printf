@@ -7,8 +7,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define BUF_SIZE 1024
-
 /**
   * struct flags - structure
   * @c_flag: flag
@@ -46,8 +44,6 @@ char *flag_s(va_list);
 char *flag_nil(char c);
 char *flag_percent(void);
 char *flag_i_d(va_list);
-
-
-
+#define BUFFER_SIZE 1024
 
 #endif
