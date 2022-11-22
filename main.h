@@ -45,6 +45,6 @@ char *flag_c(va_list);
 char *flag_nil(char);
 char *flag_i_d(va_list);
 char *flag_percent(void);
-#define BUFFER_SIZE 1025
+#define BUFFER_SIZE 1024
 
 #endif
