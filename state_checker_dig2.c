@@ -9,7 +9,7 @@
 
 int state_checker_dig2(const char *format, va_list args)
 {
-	int i, counter = 0;
+	int i, state = 1;
 	char buf[BUF_SIZE];
 
 	switch (*format)
@@ -19,7 +19,7 @@ int state_checker_dig2(const char *format, va_list args)
 				unsigned int n = va_arg(args, unsigned int);
 
 				unsigned_no_to_str(n, 10, buf);
-				for (i = 0; buf[i]; i++, counter++)
+				for (i = 0; buf[i]; i++)
 					_putchar(buf[i]);
 				break;
 			}
@@ -28,15 +28,16 @@ int state_checker_dig2(const char *format, va_list args)
 				unsigned int n = va_arg(args, unsigned int);
 
 				unsigned_no_to_str(n, 16, buf);
-				for (i = 0; buf[i]; i++, counter++)
+				for (i = 0; buf[i]; i++)
 					_putchar(buf[i]);
 				break;
 			}
 		default:
 		{
-			counter += state_checker_adv(format, args);
+			state = state_checker_adv(format, args);
 			break;
 		}
 	}
-	return (counter);
+	state = 0;
+	return (state);
 }
