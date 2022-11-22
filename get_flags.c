@@ -16,7 +16,6 @@ char *(*get_flags(char s))(va_list)
 		{"s", flag_s},
 		{"d", flag_i_d},
 		{"i", flag_i_d},
-		{"x", flag_x},
 		{"%", flag_percent},
 		{NULL, NULL}};
 

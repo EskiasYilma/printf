@@ -43,8 +43,6 @@ char *flag_s(va_list s)
 
 	if (str == NULL)
 		return ("(null)");
-	if (*str == '\0')
-		return (-1);
 	return (str);
 }
 
